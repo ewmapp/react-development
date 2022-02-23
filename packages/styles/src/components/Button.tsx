@@ -104,6 +104,11 @@ export const Button = css({
         },
       },
     },
+    rightIcon: {
+      [`& ${ButtonLabel}`]: {
+        marginRight: '$3',
+      },
+    },
   },
 
   compoundVariants: [

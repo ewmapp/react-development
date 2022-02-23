@@ -163,3 +163,5 @@ export const {
     }),
   },
 })
+
+export type CSS = Stitches.CSS<typeof config>
