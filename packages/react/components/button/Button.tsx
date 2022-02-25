@@ -11,18 +11,19 @@ const StyledButton = styled('button', ButtonCSS)
 const ButtonLabel = styled('span', ButtonLabelCSS)
 const ButtonLoading = styled('span', ButtonLoadingCSS)
 
-export type ButtonProps = React.ComponentProps<typeof StyledButton> & {
-  leftIcon?: React.ReactElement
-  rightIcon?: React.ReactElement
-  loading?: boolean
-}
+export type ButtonProps = React.ComponentProps<typeof StyledButton> &
+  React.ButtonHTMLAttributes<typeof ButtonCSS> & {
+    leftIcon?: React.ReactElement
+    rightIcon?: React.ReactElement
+    loading?: boolean
+  }
 
 export const Button = forwardRef<
   React.ElementRef<typeof StyledButton>,
   ButtonProps
 >(
   (
-    { children, leftIcon, rightIcon, loading, disabled, ...props },
+    { children, rightIcon, leftIcon, loading, disabled, ...props },
     forwardRef
   ) => {
     return (

@@ -1,10 +1,11 @@
+/* (eslint@typescript-eslint/no-unsafe-assignment) */
 import React from 'react'
 import Head from 'next/head'
 import { Box } from '../../packages/react/components/box/Box'
 import { Container } from '../../packages/react/components/container/Container'
 import { Button } from '../../packages/react/components/button/Button'
 
-const Icone = () => {
+const icone = () => {
   return (
     <svg
       width="15"
@@ -30,8 +31,8 @@ export default function Home() {
         <title>My page title</title>
       </Head>
       <Container css={{ backgroundColor: '#ccc' }}>
-        <h1>Teste</h1>{' '}
-        <Button size="sm" outlined rightIcon={Icone()}>
+        <h1>Teste</h1>
+        <Button size="sm" disabled leftIcon={icone()} rightIcon={icone()}>
           Teste
         </Button>
       </Container>
