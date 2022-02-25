@@ -4,8 +4,9 @@ import Head from 'next/head'
 import { Box } from '../../packages/react/components/box/Box'
 import { Container } from '../../packages/react/components/container/Container'
 import { Button } from '../../packages/react/components/button/Button'
+import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons'
 
-const icone = () => {
+/* const icone = () => {
   return (
     <svg
       width="15"
@@ -22,7 +23,7 @@ const icone = () => {
       ></path>
     </svg>
   )
-}
+} */
 
 export default function Home() {
   return (
@@ -32,7 +33,12 @@ export default function Home() {
       </Head>
       <Container css={{ backgroundColor: '#ccc' }}>
         <h1>Teste</h1>
-        <Button size="sm" disabled leftIcon={icone()} rightIcon={icone()}>
+        <Button
+          size="sm"
+          variant="solid"
+          leftIcon={<ArrowLeftIcon />}
+          rightIcon={<ArrowRightIcon />}
+        >
           Teste
         </Button>
       </Container>

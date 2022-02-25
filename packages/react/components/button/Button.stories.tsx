@@ -1,7 +1,25 @@
 import { Story, Meta } from '@storybook/react'
 import React from 'react'
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  LockClosedIcon,
+  PersonIcon,
+} from '@radix-ui/react-icons'
 
 import { Button, ButtonProps } from './Button'
+
+const iconArgType = {
+  options: ['noIcon', 'Person', 'ArrowLeft', 'ArrowRight', 'LockClosed'],
+  mapping: {
+    noIcon: null,
+    Person: <PersonIcon />,
+    ArrowLeft: <ArrowLeftIcon />,
+    ArrowRight: <ArrowRightIcon />,
+    LockClosed: <LockClosedIcon />,
+  },
+  control: { type: 'select', labels: { noIcon: 'No icon' } },
+}
 
 export default {
   title: 'Form/Button',
@@ -20,6 +38,8 @@ export default {
     disabled: { control: { type: 'boolean' } },
     outlined: { control: { type: 'boolean' } },
     loading: { control: { type: 'boolean' } },
+    leftIcon: iconArgType,
+    rightIcon: iconArgType,
   },
   args: {
     children: 'LABEL',

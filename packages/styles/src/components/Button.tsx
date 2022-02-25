@@ -4,6 +4,10 @@ export const ButtonLabel = css({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+
+  '& > * + *': {
+    marginLeft: '$3',
+  },
 })
 
 ButtonLabel.toString = () => `.${ButtonLabel.className}`
