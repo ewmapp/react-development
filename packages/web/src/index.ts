@@ -1,4 +1,14 @@
-import { colors } from '../../colors/src'
+/* import { colors as defaultColors } from '../../colors/src' */
+import {
+  slate,
+  slateDark,
+  pink,
+  pinkDark,
+  red,
+  redDark,
+  green,
+  greenDark,
+} from '@radix-ui/colors'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
 
@@ -19,7 +29,35 @@ export const {
     opacity: 'opacity',
   },
   theme: {
-    colors,
+    colors: {
+      ...slate,
+      ...red,
+      ...pink,
+      ...green,
+
+      bgColor: '$slate12',
+      hiContrast: '$slate1',
+      loContrast: '$slate12',
+
+      // Theme Component Color
+      loPrimary: '$pink11',
+      hiPrimary: '$pink12',
+      bgPrimary: '$pink1',
+
+      // Theme Component Background
+      hiBgPrimary: '$pink5',
+      miBgPrimary: '$pink4',
+      loBgPrimary: '$pink3',
+
+      // Theme Component Border
+      hiBdPrimary: '$pink8',
+      miBdPrimary: '$pink7',
+      loBdPrimary: '$pink6',
+
+      // Theme Component Solid
+      hiSoPrimary: '$pink9',
+      loSoPrimary: '$pink10',
+    },
 
     space: {
       px: '1px',
@@ -57,8 +95,8 @@ export const {
     },
 
     fonts: {
-      default: 'Untitled Sans, sans-serif',
-      highlight: 'Untitled Sans, sans-serif',
+      default: 'Untitled Sans, -apple-system, system-ui, sans-serif',
+      highlight: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       reading: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       code: 'Söhne Mono, menlo, monospace',
     },
@@ -161,6 +199,38 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
+  },
+})
+
+export const darkTheme = createTheme('dark-theme', {
+  colors: {
+    ...slateDark,
+    ...redDark,
+    ...pinkDark,
+    ...greenDark,
+
+    bgColor: '$slate12',
+    hiContrast: '$slate1',
+    loContrast: '$slate12',
+
+    // Theme Component Color
+    loPrimary: '$pink11',
+    hiPrimary: '$pink12',
+    bgPrimary: '$pink1',
+
+    // Theme Component Background
+    hiBgPrimary: '$pink5',
+    miBgPrimary: '$pink4',
+    loBgPrimary: '$pink3',
+
+    // Theme Component Border
+    hiBdPrimary: '$pink8',
+    miBdPrimary: '$pink7',
+    loBdPrimary: '$pink6',
+
+    // Theme Component Solid
+    hiSoPrimary: '$pink9',
+    loSoPrimary: '$pink10',
   },
 })
 

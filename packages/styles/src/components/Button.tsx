@@ -34,46 +34,60 @@ export const Button = css({
   borderRadius: '$sm',
   fontFamily: '$default',
   fontSize: '$sm',
-  fontWeight: '$bold',
+  fontWeight: 500,
   cursor: 'pointer',
   transition: 'background 0.2s ease 0s, box-shadow 0.2s ease 0s',
 
   variants: {
     variant: {
       solid: {
-        backgroundColor: '$color-primary',
+        backgroundColor: '$loSoPrimary',
         color: '$hiContrast',
         '&:hover': {
-          backgroundColor: '$color-primary-light',
+          backgroundColor: '$hiSoPrimary',
         },
       },
       soft: {
-        backgroundColor: '$shape-secondary',
-        color: '$hiContrast',
+        backgroundColor: '$loBgPrimary',
+        color: '$loPrimary',
         '&:hover': {
-          backgroundColor: '$shape-tertiary',
+          backgroundColor: '$hiBgPrimary',
         },
       },
       ghost: {
         backgroundColor: 'transpatent',
-        color: '$hiContrast',
+        color: '$loPrimary',
         '&:hover': {
-          backgroundColor: '$shape-tertiary',
-        },
-      },
-      danger: {
-        backgroundColor: '$shape-secondary',
-        color: '$danger-light',
-        '&:hover': {
-          backgroundColor: '$shape-tertiary',
+          backgroundColor: '$hiBgPrimary',
         },
       },
       link: {
         backgroundColor: 'transpatent',
-        color: '$color-primary',
+        color: '$loPrimary',
         '&:hover': {
-          color: '$color-primary-light',
+          color: '$loPrimary',
           backgroundColor: 'transpatent',
+        },
+      },
+      light: {
+        backgroundColor: '$slate6',
+        color: '$slate11',
+        '&:hover': {
+          backgroundColor: '$slate7',
+        },
+      },
+      success: {
+        backgroundColor: '$green6',
+        color: '$green11',
+        '&:hover': {
+          backgroundColor: '$green7',
+        },
+      },
+      danger: {
+        backgroundColor: '$red6',
+        color: '$red11',
+        '&:hover': {
+          backgroundColor: '$red7',
         },
       },
     },
@@ -115,10 +129,37 @@ export const Button = css({
       variant: 'solid',
       outlined: true,
       css: {
-        background: 'none',
-        borderColor: '$color-primary',
+        color: '$loPrimary',
+        background: '$bgPrimary',
+        borderColor: '$loBdPrimary',
         '&:hover': {
-          color: '$hiContrast',
+          color: '$loPrimary',
+          background: '$loBgPrimary',
+          borderColor: '$hiBdPrimary',
+        },
+      },
+    },
+    {
+      variant: 'soft',
+      outlined: true,
+      css: {
+        background: 'none',
+        borderColor: '$loBdPrimary',
+        '&:hover': {
+          background: 'none',
+          borderColor: '$hiBdPrimary',
+        },
+      },
+    },
+    {
+      variant: 'ghost',
+      outlined: true,
+      css: {
+        background: 'none',
+        borderColor: 'none',
+        '&:hover': {
+          background: 'none',
+          borderColor: '$hiBdPrimary',
         },
       },
     },
@@ -128,18 +169,10 @@ export const Button = css({
       disabled: true,
       css: {
         background: 'none',
-        borderColor: '$color-primary',
+        borderColor: '$loBdPrimary',
         '&:hover': {
-          background: 'none',
+          background: '$loBgPrimary',
         },
-      },
-    },
-    {
-      variant: 'soft',
-      outlined: true,
-      css: {
-        background: 'none',
-        borderColor: '$shape-secondary',
       },
     },
     {
@@ -148,9 +181,46 @@ export const Button = css({
       disabled: true,
       css: {
         background: 'none',
-        borderColor: '$shape-secondary',
+        borderColor: '$loBdPrimary',
         '&:hover': {
           background: 'none',
+          borderColor: '$hiBdPrimary',
+        },
+      },
+    },
+    {
+      variant: 'light',
+      outlined: true,
+      css: {
+        background: '$slate1',
+        borderColor: '$slate8',
+        '&:hover': {
+          background: '$slate2',
+          borderColor: '$slate8',
+        },
+      },
+    },
+    {
+      variant: 'success',
+      outlined: true,
+      css: {
+        background: '$green1',
+        borderColor: '$green8',
+        '&:hover': {
+          background: '$green2',
+          borderColor: '$green8',
+        },
+      },
+    },
+    {
+      variant: 'danger',
+      outlined: true,
+      css: {
+        background: '$red1',
+        borderColor: '$red6',
+        '&:hover': {
+          background: '$red2',
+          borderColor: '$red8',
         },
       },
     },

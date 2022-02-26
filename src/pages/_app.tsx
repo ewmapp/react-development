@@ -6,7 +6,7 @@ import { globalCss } from '../../packages/web/src'
 const globalStyles = globalCss({
   '*': { margin: 0, padding: 0 },
   body: {
-    backgroundColor: '$color-background',
+    backgroundColor: '$bgColor',
   },
 })
 

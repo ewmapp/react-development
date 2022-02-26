@@ -31,15 +31,137 @@ export default function Home() {
       <Head>
         <title>My page title</title>
       </Head>
-      <Container css={{ backgroundColor: '#ccc' }}>
-        <h1>Teste</h1>
-        <Button
-          size="sm"
-          variant="solid"
-          leftIcon={<ArrowLeftIcon />}
-          rightIcon={<ArrowRightIcon />}
-        >
-          Teste
+
+      <Container>
+        <h3>Theme Buttons</h3>
+        <hr />
+      </Container>
+
+      <Container
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: '10px 20px',
+        }}
+      >
+        <Button variant="solid">SOLID</Button>
+        <Button variant="solid" disabled>
+          SOLID
+        </Button>
+        <Button variant="soft">SOFT</Button>
+        <Button variant="soft" disabled>
+          SOFT
+        </Button>
+        <Button variant="ghost">GHOST</Button>
+        <Button variant="ghost" disabled>
+          GHOST
+        </Button>
+        <Button variant="link">LINK</Button>
+        <Button variant="link" disabled>
+          LINK
+        </Button>
+      </Container>
+
+      <Container css={{ marginTop: 40 }}>
+        <h3>Theme Buttons Outline</h3>
+        <hr />
+      </Container>
+
+      <Container
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: '10px 20px',
+        }}
+      >
+        <Button variant="solid" outlined>
+          SOLID
+        </Button>
+        <Button variant="solid" outlined disabled>
+          SOLID
+        </Button>
+        <Button variant="soft" outlined>
+          SOFT
+        </Button>
+        <Button variant="soft" outlined disabled>
+          SOFT
+        </Button>
+        <Button variant="ghost" outlined>
+          GHOST
+        </Button>
+        <Button variant="ghost" outlined disabled>
+          GHOST
+        </Button>
+        <Button variant="link">LINK</Button>
+        <Button variant="link" outlined disabled>
+          LINK
+        </Button>
+      </Container>
+
+      <Container css={{ marginTop: 40 }}>
+        <h3>Default Buttons</h3>
+        <hr />
+      </Container>
+
+      <Container
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: '10px 20px',
+        }}
+      >
+        <Button variant="light">LIGHT</Button>
+        <Button variant="light" disabled>
+          LIGHT
+        </Button>
+        <Button variant="light" outlined>
+          LIGHT
+        </Button>
+        <Button variant="light" outlined disabled>
+          LIGHT
+        </Button>
+      </Container>
+
+      <Container
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: '10px 20px',
+        }}
+      >
+        <Button variant="success">SUCCESS</Button>
+        <Button variant="success" disabled>
+          SUCCESS
+        </Button>
+        <Button variant="success" outlined>
+          SUCCESS
+        </Button>
+        <Button variant="success" outlined disabled>
+          SUCCESS
+        </Button>
+      </Container>
+
+      <Container
+        css={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          padding: '10px 20px',
+        }}
+      >
+        <Button variant="danger">DANGER</Button>
+        <Button variant="danger" disabled>
+          DANGER
+        </Button>
+        <Button variant="danger" outlined>
+          DANGER
+        </Button>
+        <Button variant="danger" outlined disabled>
+          DANGER
         </Button>
       </Container>
     </Box>
