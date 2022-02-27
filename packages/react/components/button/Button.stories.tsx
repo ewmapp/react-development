@@ -28,7 +28,16 @@ export default {
     css: { table: { disabled: true } },
     children: { control: { type: 'text' } },
     variant: {
-      options: ['solid', 'soft', 'ghost', 'danger', 'link'],
+      options: [
+        'solid',
+        'soft',
+        'ghost',
+        'link',
+        'light',
+        'dark',
+        'success',
+        'danger',
+      ],
       control: { type: 'inline-radio' },
     },
     size: {
@@ -63,6 +72,15 @@ Ghost.args = { variant: 'ghost' }
 
 export const Link = Template.bind({})
 Link.args = { variant: 'link' }
+
+export const Light = Template.bind({})
+Light.args = { variant: 'light' }
+
+export const Dark = Template.bind({})
+Dark.args = { variant: 'dark' }
+
+export const Success = Template.bind({})
+Success.args = { variant: 'success' }
 
 export const Danger = Template.bind({})
 Danger.args = { variant: 'danger' }
