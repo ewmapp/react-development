@@ -8,6 +8,10 @@ import {
   redDark,
   green,
   greenDark,
+  slateA,
+  slateDarkA,
+  whiteA,
+  blackA,
 } from '@radix-ui/colors'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
@@ -31,11 +35,14 @@ export const {
   theme: {
     colors: {
       ...slate,
+      ...slateA,
       ...red,
       ...pink,
       ...green,
+      ...whiteA,
+      ...blackA,
 
-      bgColor: '$slate12',
+      bgColor: '$slate1',
       hiContrast: '$slate1',
       loContrast: '$slate12',
 
@@ -43,6 +50,8 @@ export const {
       loPrimary: '$pink11',
       hiPrimary: '$pink12',
       bgPrimary: '$pink1',
+
+      loSecondary: '$slate5',
 
       // Theme Component Background
       hiBgPrimary: '$pink5',
@@ -57,6 +66,12 @@ export const {
       // Theme Component Solid
       hiSoPrimary: '$pink9',
       loSoPrimary: '$pink10',
+
+      hiBgSecondary: '$slateA9',
+      miBgSecondary: '$slateA10',
+      loBgSecondary: '$slateA11',
+
+      loTransparent: 'rgba(255,255,255,0.5)',
     },
 
     space: {
@@ -204,12 +219,15 @@ export const {
 
 export const darkTheme = createTheme('dark-theme', {
   colors: {
+    ...slateDarkA,
     ...slateDark,
     ...redDark,
     ...pinkDark,
     ...greenDark,
+    ...whiteA,
+    ...blackA,
 
-    bgColor: '$slate12',
+    bgColor: '$slate1',
     hiContrast: '$slate1',
     loContrast: '$slate12',
 
@@ -217,6 +235,8 @@ export const darkTheme = createTheme('dark-theme', {
     loPrimary: '$pink11',
     hiPrimary: '$pink12',
     bgPrimary: '$pink1',
+
+    loSecondary: '$slate11',
 
     // Theme Component Background
     hiBgPrimary: '$pink5',
@@ -231,6 +251,12 @@ export const darkTheme = createTheme('dark-theme', {
     // Theme Component Solid
     hiSoPrimary: '$pink9',
     loSoPrimary: '$pink10',
+
+    hiBgSecondary: '$slateA5',
+    miBgSecondary: '$slateA4',
+    loBgSecondary: '$slateA3',
+
+    loTransparent: 'rgba(0,0,0,0.5)',
   },
 })
 
