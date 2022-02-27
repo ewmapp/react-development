@@ -13,7 +13,7 @@ export const IconButton = forwardRef<
 >(({ children, ...props }, forwardRef) => {
   return (
     <StyledIconButton ref={forwardRef} {...props}>
-      <span>{children}</span>
+      {children}
     </StyledIconButton>
   )
 })
