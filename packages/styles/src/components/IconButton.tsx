@@ -57,6 +57,12 @@ export const IconButton = css({
         },
       },
     },
+    disabled: {
+      true: {
+        cursor: 'not-allowed',
+        opacity: '$medium',
+      },
+    },
     outlined: {
       true: {
         color: '$loPrimary',
