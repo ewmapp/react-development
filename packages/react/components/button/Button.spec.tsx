@@ -16,7 +16,7 @@ describe('<Button />', () => {
     expect(button).toBeInTheDocument()
 
     expect(button.getAttributeNode('class')).toHaveTextContent(
-      'c-hUiIRX-btevTr-disabled-true'
+      'c-jUgGZD-btevTr-disabled-true'
     )
   })
 
@@ -27,7 +27,7 @@ describe('<Button />', () => {
     expect(button).toBeInTheDocument()
 
     expect(button.getAttributeNode('class')).toHaveTextContent(
-      'c-hUiIRX-pAIqg-loading-true'
+      'c-jUgGZD-kVetMw-loading-true'
     )
   })
 })
