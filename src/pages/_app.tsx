@@ -1,7 +1,8 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes'
 
-import { globalCss } from '../../packages/web/src'
+import { globalCss, darkTheme } from '../../packages/web/src'
 
 const globalStyles = globalCss({
   '*': { margin: 0, padding: 0 },
@@ -13,7 +14,16 @@ const globalStyles = globalCss({
 function App({ Component, pageProps }: AppProps) {
   globalStyles()
 
-  return <Component {...pageProps} />
+  return (
+    <ThemeProvider
+      disableTransitionOnChange
+      attribute="class"
+      value={{ light: 'light-theme', dark: darkTheme.className }}
+      defaultTheme="system"
+    >
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 export default App
