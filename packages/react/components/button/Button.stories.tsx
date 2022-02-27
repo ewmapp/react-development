@@ -65,7 +65,7 @@ const Template: Story<ButtonProps> = args => <Button {...args} />
 export const Solid = Template.bind({})
 
 export const Soft = Template.bind({})
-Soft.args = { variant: 'solid' }
+Soft.args = { variant: 'soft' }
 
 export const Ghost = Template.bind({})
 Ghost.args = { variant: 'ghost' }
