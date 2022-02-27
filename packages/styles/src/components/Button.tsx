@@ -76,6 +76,13 @@ export const Button = css({
           backgroundColor: '$slate7',
         },
       },
+      dark: {
+        backgroundColor: '$loBgSecondary',
+        color: '$loSecondary',
+        '&:hover': {
+          backgroundColor: '$hiBgSecondary',
+        },
+      },
       success: {
         backgroundColor: '$green6',
         color: '$green11',
@@ -228,6 +235,6 @@ export const Button = css({
 
   defaultVariants: {
     variant: 'solid',
-    size: 'sm',
+    size: 'md',
   },
 })
