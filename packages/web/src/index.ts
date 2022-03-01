@@ -1,20 +1,39 @@
 /* import { colors as defaultColors } from '../../colors/src' */
 import {
-  slate,
-  slateDark,
-  pink,
-  pinkDark,
-  red,
-  redDark,
+  blue,
+  blueDark,
+  crimson,
+  crimsonDark,
+  cyan,
+  cyanDark,
+  gray,
+  grayDark,
   green,
   greenDark,
+  lime,
+  limeDark,
+  orange,
+  orangeDark,
+  pink,
+  pinkDark,
+  purple,
+  purpleDark,
+  red,
+  redDark,
+  slate,
   slateA,
+  slateDark,
   slateDarkA,
+  violet,
+  violetDark,
+  yellow,
+  yellowDark,
   whiteA,
   blackA,
 } from '@radix-ui/colors'
 import { createStitches, defaultThemeMap } from '@stitches/react'
 import type * as Stitches from '@stitches/react'
+export type { VariantProps } from '@stitches/react'
 
 export const {
   styled,
@@ -34,11 +53,22 @@ export const {
   },
   theme: {
     colors: {
+      ...blue,
+      ...crimson,
+      ...cyan,
+      ...gray,
+      ...green,
+      ...lime,
+      ...orange,
+      ...pink,
+      ...purple,
+      ...blueDark,
+      ...red,
       ...slate,
       ...slateA,
-      ...red,
-      ...pink,
-      ...green,
+      ...violet,
+      ...yellow,
+
       ...whiteA,
       ...blackA,
 
@@ -214,16 +244,35 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
+    appearance: (value: Stitches.PropertyValue<'appearance'>) => ({
+      WebkitAppearance: value,
+      appearance: value,
+    }),
+    backgroundClip: (value: Stitches.PropertyValue<'backgroundClip'>) => ({
+      WebkitBackgroundClip: value,
+      backgroundClip: value,
+    }),
   },
 })
 
+export type CSS = Stitches.CSS<typeof config>
+
 export const darkTheme = createTheme('dark-theme', {
   colors: {
-    ...slateDarkA,
-    ...slateDark,
-    ...redDark,
-    ...pinkDark,
+    ...crimsonDark,
+    ...cyanDark,
+    ...grayDark,
     ...greenDark,
+    ...limeDark,
+    ...orangeDark,
+    ...pinkDark,
+    ...purpleDark,
+    ...redDark,
+    ...slateDark,
+    ...slateDarkA,
+    ...violetDark,
+    ...yellowDark,
+
     ...whiteA,
     ...blackA,
 

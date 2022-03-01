@@ -7,6 +7,7 @@ import { Button } from '../../packages/react/components/button/Button'
 import { IconButton } from '../../packages/react/components/iconButton/IconButton'
 import { SunIcon, PersonIcon } from '@radix-ui/react-icons'
 import { useTheme } from 'next-themes'
+import { Text } from '../../packages/react/components/text/Text'
 
 export default function Home() {
   const { theme, setTheme } = useTheme()
@@ -16,7 +17,7 @@ export default function Home() {
         <title>My page title</title>
       </Head>
 
-      <Container css={{ padding: 50 }}>
+      <Container css={{ padding: '40px 20px' }}>
         <IconButton
           variant="ghost"
           size="sm"
@@ -26,6 +27,9 @@ export default function Home() {
         >
           <SunIcon />
         </IconButton>
+        <Text size="9xl" variant="pink" gradient>
+          Olá Mundo
+        </Text>
       </Container>
 
       <Container>
