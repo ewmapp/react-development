@@ -9,12 +9,12 @@ import { SunIcon, PersonIcon } from '@radix-ui/react-icons'
 import { useTheme } from 'next-themes'
 import { Text } from '../../packages/react/components/text/Text'
 
-export default function Home() {
+export default function Teste() {
   const { theme, setTheme } = useTheme()
   return (
     <Box>
       <Head>
-        <title>My page title</title>
+        <title>My page of test</title>
       </Head>
 
       <Container css={{ padding: '40px 20px' }}>
