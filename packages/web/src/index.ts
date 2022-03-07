@@ -140,7 +140,7 @@ export const {
     },
 
     fonts: {
-      default: 'Untitled Sans, -apple-system, system-ui, sans-serif',
+      default: 'Roboto, -apple-system, system-ui, sans-serif',
       highlight: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       reading: 'Untitled Sans, -apple-system, system-ui, sans-serif',
       code: 'Söhne Mono, menlo, monospace',
@@ -186,6 +186,7 @@ export const {
     zIndices: {
       overlay: 9995,
       modal: 9999,
+      under: -1,
     },
   },
 
@@ -244,6 +245,77 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
+
+    ta: (value: Stitches.PropertyValue<'textAlign'>) => ({ textAlign: value }),
+
+    fd: (value: Stitches.PropertyValue<'flexDirection'>) => ({
+      flexDirection: value,
+    }),
+    fw: (value: Stitches.PropertyValue<'flexWrap'>) => ({ flexWrap: value }),
+
+    ai: (value: Stitches.PropertyValue<'alignItems'>) => ({
+      alignItems: value,
+    }),
+    ac: (value: Stitches.PropertyValue<'alignContent'>) => ({
+      alignContent: value,
+    }),
+    jc: (value: Stitches.PropertyValue<'justifyContent'>) => ({
+      justifyContent: value,
+    }),
+    as: (value: Stitches.PropertyValue<'alignSelf'>) => ({ alignSelf: value }),
+    fg: (value: Stitches.PropertyValue<'flexGrow'>) => ({ flexGrow: value }),
+    fs: (value: Stitches.PropertyValue<'flexShrink'>) => ({
+      flexShrink: value,
+    }),
+    fb: (value: Stitches.PropertyValue<'flexBasis'>) => ({ flexBasis: value }),
+
+    bc: (value: Stitches.PropertyValue<'backgroundColor'>) => ({
+      backgroundColor: value,
+    }),
+
+    br: (value: Stitches.PropertyValue<'borderRadius'>) => ({
+      borderRadius: value,
+    }),
+    btrr: (value: Stitches.PropertyValue<'borderTopRightRadius'>) => ({
+      borderTopRightRadius: value,
+    }),
+    bbrr: (value: Stitches.PropertyValue<'borderBottomRightRadius'>) => ({
+      borderBottomRightRadius: value,
+    }),
+    bblr: (value: Stitches.PropertyValue<'borderBottomLeftRadius'>) => ({
+      borderBottomLeftRadius: value,
+    }),
+    btlr: (value: Stitches.PropertyValue<'borderTopLeftRadius'>) => ({
+      borderTopLeftRadius: value,
+    }),
+
+    bs: (value: Stitches.PropertyValue<'boxShadow'>) => ({ boxShadow: value }),
+
+    lh: (value: Stitches.PropertyValue<'lineHeight'>) => ({
+      lineHeight: value,
+    }),
+
+    ox: (value: Stitches.PropertyValue<'overflowX'>) => ({ overflowX: value }),
+    oy: (value: Stitches.PropertyValue<'overflowY'>) => ({ overflowY: value }),
+
+    pe: (value: Stitches.PropertyValue<'pointerEvents'>) => ({
+      pointerEvents: value,
+    }),
+    us: (value: Stitches.PropertyValue<'userSelect'>) => ({
+      WebkitUserSelect: value,
+      userSelect: value,
+    }),
+
+    userSelect: (value: Stitches.PropertyValue<'userSelect'>) => ({
+      WebkitUserSelect: value,
+      userSelect: value,
+    }),
+
+    size: (value: Stitches.PropertyValue<'width'>) => ({
+      width: value,
+      height: value,
+    }),
+
     appearance: (value: Stitches.PropertyValue<'appearance'>) => ({
       WebkitAppearance: value,
       appearance: value,
@@ -308,6 +380,3 @@ export const darkTheme = createTheme('dark-theme', {
     loTransparent: 'rgba(0,0,0,0.5)',
   },
 })
-
-/* export type { VariantProps } from '@stitches/react'
-export type CSS = Stitches.CSS<typeof config> */

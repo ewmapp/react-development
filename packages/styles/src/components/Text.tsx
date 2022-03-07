@@ -75,6 +75,9 @@ export const Text = css({
       contrast: {
         color: '$hiContrast',
       },
+      default: {
+        color: 'inherit',
+      },
     },
     gradient: {
       true: {
@@ -143,6 +146,6 @@ export const Text = css({
   ],
   defaultVariants: {
     size: 'md',
-    variant: 'contrast',
+    variant: 'default',
   },
 })

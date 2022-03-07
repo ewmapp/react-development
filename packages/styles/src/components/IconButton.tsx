@@ -35,7 +35,7 @@ export const IconButton = css({
     },
     variant: {
       solid: {
-        color: '$hiContrast',
+        color: '#fff',
         backgroundColor: '$loSoPrimary',
         '&:hover': {
           backgroundColor: '$hiSoPrimary',

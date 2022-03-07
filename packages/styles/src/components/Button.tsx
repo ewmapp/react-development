@@ -42,7 +42,7 @@ export const Button = css({
     variant: {
       solid: {
         backgroundColor: '$loSoPrimary',
-        color: '$hiContrast',
+        color: '#fff',
         '&:hover': {
           backgroundColor: '$hiSoPrimary',
         },
