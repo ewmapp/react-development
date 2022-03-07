@@ -22,16 +22,15 @@ export const IconButton = css({
     size: {
       sm: {
         height: '$8',
-        padding: '3px $3 0 $3',
-        fontsize: '2px',
+        padding: '0 $3 0 $3',
       },
       md: {
         height: '$10',
-        padding: '3px $4 0',
+        padding: '0 $4 0',
       },
       lg: {
         height: '$12',
-        padding: '3px $5 0',
+        padding: '0 $5 0',
       },
     },
     variant: {
