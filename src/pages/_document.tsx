@@ -12,7 +12,34 @@ export default class Document extends NextDocument {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-
+          <link
+            rel="preload"
+            href="/fonts/roboto-v29-latin-regular.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v29-latin-regular.woff2"
+            as="font"
+            type="font/woff"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v29-latin-500.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v29-latin-500.woff2"
+            as="font"
+            type="font/woff"
+            crossOrigin="anonymous"
+          />
           <link
             rel="preload"
             href="/fonts/UntitledSansWeb-Regular.woff"
@@ -58,6 +85,18 @@ export default class Document extends NextDocument {
           <style
             dangerouslySetInnerHTML={{
               __html: `
+              @font-face {
+                font-family: 'Roboto';
+                font-weight: 400;
+                font-display: swap;
+                src: url(/fonts/roboto-v29-latin-regular.woff2) format('woff2'), url(/fonts/roboto-v29-latin-regular.woff) format('woff');
+              }
+              @font-face {
+                font-family: 'Roboto';
+                font-weight: 500;
+                font-display: swap;
+                src: url(/fonts/roboto-v29-latin-500.woff2) format('woff2'), url(/fonts/roboto-v29-latin-500.woff) format('woff');
+              }
               @font-face {
                 font-family: 'Untitled Sans';
                 font-weight: 400;

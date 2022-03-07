@@ -1,46 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-/* @font-face {
-  font-family: 'Playfair Display';
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap') format('woff2');
+  src: url('roboto-v29-latin-regular.woff2') format('woff2'),
+    url('roboto-v29-latin-regular.woff') format('woff');
 }
 
+/* roboto-500 - latin */
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap') format('woff2');
+  src: url('roboto-v29-latin-500.woff2') format('woff2'),
+    url('roboto-v29-latin-500.woff') format('woff');
 }
-
-@font-face {
-  font-family: 'Poppins';
-  font-weight: 400;
-  font-display: swap;
-  src: url(Poppins.woff2) format('woff2');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  font-weight: 500;
-  font-display: swap;
-  src: url(Poppins.woff2) format('woff2');
-} */
-
 
 @font-face {
   font-family: 'Untitled Sans';
   font-weight: 400;
   font-display: swap;
-  src: url(UntitledSansWeb-Regular.woff2) format('woff2'), url(UntitledSansWeb-Regular.woff) format('woff');
+  src: url('UntitledSansWeb-Regular.woff2') format('woff2'),
+    url('UntitledSansWeb-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Untitled Sans';
   font-weight: 500;
   font-display: swap;
-  src: url(UntitledSansWeb-Medium.woff2) format('woff2'), url(UntitledSansWeb-Medium.woff) format('woff');
+  src: url('UntitledSansWeb-Medium.woff2') format('woff2'),
+    url('UntitledSansWeb-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -48,7 +37,8 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url('soehne-mono-web-buch.woff2') format('woff2'), url('soehne-mono-web-buch.woff') format('woff');
+  src: url('soehne-mono-web-buch.woff2') format('woff2'),
+    url('soehne-mono-web-buch.woff') format('woff');
 }
 
 @font-face {
@@ -56,7 +46,8 @@
   font-weight: normal;
   font-style: italic;
   font-display: swap;
-  src: url('soehne-mono-web-buch-kursiv.woff2') format('woff2'), url('soehne-mono-web-buch-kursiv.woff') format('woff');
+  src: url('soehne-mono-web-buch-kursiv.woff2') format('woff2'),
+    url('soehne-mono-web-buch-kursiv.woff') format('woff');
 }
 
 @font-face {
@@ -64,7 +55,8 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url('soehne-mono-web-kraftig.woff2') format('woff2'), url('soehne-mono-web-kraftig.woff') format('woff');
+  src: url('soehne-mono-web-kraftig.woff2') format('woff2'),
+    url('soehne-mono-web-kraftig.woff') format('woff');
 }
 
 @font-face {
