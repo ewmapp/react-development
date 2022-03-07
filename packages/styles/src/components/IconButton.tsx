@@ -42,14 +42,14 @@ export const IconButton = css({
         },
       },
       soft: {
-        color: '$loContrast',
+        color: '$hiContrast',
         backgroundColor: '$slate2',
         '&:hover': {
           backgroundColor: '$slate3',
         },
       },
       ghost: {
-        color: '$loContrast',
+        color: '$hiContrast',
         backgroundColor: 'transparent',
         '&:hover': {
           backgroundColor: 'transparent',

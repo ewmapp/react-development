@@ -73,7 +73,7 @@ export const Text = css({
         color: '$orange11',
       },
       contrast: {
-        color: '$loContrast',
+        color: '$hiContrast',
       },
     },
     gradient: {
