@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   HomeIcon,
   HamburgerMenuIcon,
@@ -10,8 +11,10 @@ import { SideBarItem } from '../../components/sideBar/SideBarItem'
 import { SideBarMenu } from '../../components/sideBar/SideBarMenu'
 import { SideBarSubMenu } from '../../components/sideBar/SideBarSubMenu'
 
-import { styled } from '../../../packages/web/src'
+import { styled, css } from '../../../packages/web/src'
 import { useState } from 'react'
+
+import ReactPlayer from 'react-player/lazy'
 
 const Main = styled('section', {
   minHeight: '100vh',
@@ -74,6 +77,7 @@ const SideBarItemLink = styled('a', {
 
 const NavIcon = styled('a', {
   cursor: 'pointer',
+  color: '$hiContrast',
   alignItems: 'center',
   appearance: 'none',
   borderWidth: '0',
@@ -95,6 +99,17 @@ const NavIcon = styled('a', {
   },
 })
 
+const PlayWrapper = styled('div', {
+  position: 'relative',
+  paddingTop: '56.25%',
+})
+
+const playerReact = css({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+})
+
 export default function Home() {
   const [sidebar, setSidebar] = useState(false)
 
@@ -113,7 +128,7 @@ export default function Home() {
             css={{
               display: 'flex',
               justifyContent: 'space-between',
-              background: '$blue2',
+              background: '$loContrast',
               marginTop: 0,
               marginBottom: 0,
             }}
@@ -125,6 +140,7 @@ export default function Home() {
             <Text>Welcome</Text>
           </Container>
         </Section>
+
         <SideBar show={sidebar}>
           <NavIcon
             onClick={showSideBar}
@@ -186,6 +202,42 @@ export default function Home() {
             </SideBarItem>
           </SideBarMenu>
         </SideBar>
+
+        <Container>
+          <Text variant="contrast">Ola</Text>
+          <PlayWrapper>
+            <ReactPlayer
+              className={playerReact()}
+              url="https://player.vimeo.com/video/"
+              width="100%"
+              height="100%"
+              config={{
+                vimeo: {
+                  playerOptions: {
+                    id: 682745226,
+                    controls: true,
+                    autoplay: true,
+                    dnt: true,
+                    title: true,
+                    transparent: false,
+                  },
+                },
+              }}
+            />
+          </PlayWrapper>
+        </Container>
+
+        <Container>
+          <Text variant="contrast">Ola</Text>
+          <PlayWrapper>
+            <ReactPlayer
+              className={playerReact()}
+              url="https://www.youtube.com/watch?v=zNchtTAEhoE"
+              width="100%"
+              height="100%"
+            />
+          </PlayWrapper>
+        </Container>
       </Main>
     </Box>
   )
