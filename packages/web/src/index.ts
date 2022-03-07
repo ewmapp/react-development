@@ -277,8 +277,8 @@ export const darkTheme = createTheme('dark-theme', {
     ...blackA,
 
     bgColor: '$slate1',
-    hiContrast: '$slate1',
-    loContrast: '$slate12',
+    hiContrast: '$slate12',
+    loContrast: '$slate1',
 
     // Theme Component Color
     loPrimary: '$pink11',
