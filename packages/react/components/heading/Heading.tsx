@@ -6,11 +6,22 @@ import merge from 'lodash.merge'
 const DEFAULT_TAG = 'h1'
 
 type TextSizeVariants = Pick<VariantProps<typeof Text>, 'size'>
-type HeadingSizeVariants = 'md' | 'xl' | '4xl' | '6xl'
-type HeadingVariants = { size?: HeadingSizeVariants } & Omit<
-  VariantProps<typeof Text>,
-  'size'
->
+type HeadingSizeVariants = '1' | '2' | '3' | '4'
+type HeadingVarVariants =
+  | 'default'
+  | 'contrast'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'blue'
+  | 'purple'
+  | 'pink'
+  | 'red'
+type HeadingVariants = {
+  size?: HeadingSizeVariants
+  variant?: HeadingVarVariants
+  gradient?: true
+} & Omit<VariantProps<typeof Text>, 'size'>
 type HeadingProps = React.ComponentProps<typeof DEFAULT_TAG> &
   HeadingVariants & { css?: CSS; as?: any }
 
@@ -19,28 +30,40 @@ export const Heading = React.forwardRef<
   HeadingProps
 >((props, forwardedRef) => {
   // '2' here is the default heading size variant
-  const { size = '4xl', ...textProps } = props
+  const { size = '2', ...textProps } = props
   // This is the mapping of Heading Variants to Text variants
   const textSize: Record<HeadingSizeVariants, TextSizeVariants['size']> = {
-    md: { '@initial': 'md', '@bp2': 'lg' },
-    xl: { '@initial': 'xl', '@bp2': '2xl' },
-    '4xl': { '@initial': '4xl', '@bp2': '5xl' },
-    '6xl': { '@initial': '6xl', '@bp2': '7xl' },
+    1: { '@initial': 'lg', '@bp2': 'xl' },
+    2: { '@initial': '2xl', '@bp2': '4xl' },
+    3: { '@initial': '5xl', '@bp2': '6xl' },
+    4: { '@initial': '7xl', '@bp2': '8xl' },
   }
 
   // This is the mapping of Heading Variants to Text css
   const textCss: Record<HeadingSizeVariants, CSS> = {
-    md: { fontWeight: 500, lineHeight: '20px', '@bp2': { lineHeight: '23px' } },
-    xl: { fontWeight: 500, lineHeight: '25px', '@bp2': { lineHeight: '30px' } },
-    '4xl': {
+    1: {
       fontWeight: 500,
-      lineHeight: '33px',
-      '@bp2': { lineHeight: '41px' },
+      lineHeight: '$shorter',
+      py: '$1',
+      '@bp2': { lineHeight: '$shorter', py: '$2' },
     },
-    '6xl': {
+    2: {
       fontWeight: 500,
-      lineHeight: '35px',
-      '@bp2': { lineHeight: '55px' },
+      lineHeight: '$shorter',
+      py: '$1',
+      '@bp2': { lineHeight: '$shorter', py: '$2' },
+    },
+    3: {
+      fontWeight: 500,
+      lineHeight: '$shorter',
+      py: '$2',
+      '@bp2': { lineHeight: '$shorter', py: '$3' },
+    },
+    4: {
+      fontWeight: 500,
+      lineHeight: '$shorter',
+      py: '$2',
+      '@bp2': { lineHeight: '$shorter', py: '$3' },
     },
   }
 

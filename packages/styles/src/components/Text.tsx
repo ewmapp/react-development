@@ -12,42 +12,55 @@ export const Text = css({
     size: {
       xxs: {
         fontSize: '$xxs',
+        lineHeight: '$base',
       },
       xs: {
         fontSize: '$xs',
+        lineHeight: '$base',
       },
       sm: {
         fontSize: '$sm',
+        lineHeight: '$base',
       },
       md: {
         fontSize: '$md',
+        lineHeight: '$base',
       },
       lg: {
         fontSize: '$lg',
+        lineHeight: '$base',
       },
       xl: {
         fontSize: '$xl',
+        lineHeight: '$base',
       },
       '2xl': {
         fontSize: '$2xl',
+        lineHeight: '$short',
       },
       '4xl': {
         fontSize: '$4xl',
+        lineHeight: '$short',
       },
       '5xl': {
         fontSize: '$5xl',
+        lineHeight: '$shorter',
       },
       '6xl': {
         fontSize: '$6xl',
+        lineHeight: '$shorter',
       },
       '7xl': {
         fontSize: '$7xl',
+        lineHeight: '$shorter',
       },
       '8xl': {
         fontSize: '$8xl',
+        lineHeight: '$shorter',
       },
       '9xl': {
         fontSize: '$9xl',
+        lineHeight: '$shorter',
       },
     },
     variant: {
@@ -76,7 +89,7 @@ export const Text = css({
         color: '$hiContrast',
       },
       default: {
-        color: 'inherit',
+        color: '$slate11',
       },
     },
     gradient: {

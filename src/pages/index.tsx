@@ -1,7 +1,7 @@
 /* (eslint@typescript-eslint/no-unsafe-assignment) */
 import React from 'react'
 
-import { Box, Container, Text } from '../../packages/react'
+import { Box, Container, Heading, Text } from '../../packages/react'
 import { Header } from '../components/Header'
 import { TitleAndMetaTags } from '../components/TitleAndMetaTags'
 
@@ -25,10 +25,19 @@ export default function Teste() {
           },
         }}
       />
-
-      <Header />
       <Container>
-        <Text>Olá Mundão sem fronteiras</Text>
+        <Header />
+      </Container>
+      <Container>
+        <Heading variant="pink" gradient size="3" as="h2">
+          Somos uma plataforma completa de aprendizado contínuo em programação
+        </Heading>
+        <Text variant="contrast">
+          O Ignite é um programa de aceleração profissional com treinamentos
+          certificados e reconhecidos pelo mercado. Domine Elixir, Flutter,
+          Node.js, React ou React Native e prepare-se para as melhores
+          oportunidades.
+        </Text>
       </Container>
     </Box>
   )

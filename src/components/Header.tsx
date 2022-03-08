@@ -9,7 +9,7 @@ export function Header() {
       as="header"
       css={{
         py: '$4',
-        px: '$4',
+        px: '0px',
         jc: 'space-between',
         position: 'relative',
         zIndex: 1,
